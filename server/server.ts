@@ -1,8 +1,8 @@
-import express from 'express';
+import {express, Request, Response, NextFunction } from './server-types';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
-import { Request, Response, NextFunction } from 'express';
 import path from 'path';
+
 
 const app = express();
 const server = createServer(app);
