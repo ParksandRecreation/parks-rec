@@ -2,7 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "module": "commonjs",
+    "module": "NodeNext",
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
     "strict": true,
@@ -10,9 +10,6 @@
     "target": "esnext",
     "noImplicitAny": true
   },
-  "include": [
-    "src/**/*",
-    "server/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

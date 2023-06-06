@@ -1,16 +1,16 @@
-import {express, Request, Response, NextFunction } from './server-types';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
 import path from 'path';
-
+import { Server } from 'socket.io';
+import { createServer } from 'http';
+import { express, Request, Response, NextFunction } from './server-types';
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:8080'
-  }
+    origin: 'http://localhost:8080',
+  },
 });
+const loginRoute = require('./routes/loginRoute');
 
 app.set('io', io);
 
@@ -24,9 +24,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // serve index.html
-app.get('/', (req, res) => {
+app.get('/', (req: any, res: any) => {
   res.sendFile(path.resolve(__dirname, '../dist/index.html'));
 });
+
+// oath route
+app.use('/login', loginRoute);
 
 // express global error handler (use any for error type until we define custom error type later)
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
