@@ -2,16 +2,18 @@
   "name": "parks-rec",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "dev": "webpack-dev-server --mode development --open --hot & nodemon server/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@react-oauth/google": "^0.11.0",
+    "@types/node": "^20.2.5",
     "@types/pg": "^8.10.2",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.4.0",
@@ -21,6 +23,7 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
+    "jwt-decode": "^3.1.2",
     "mini-css-extract-plugin": "^2.7.6",
     "module_name": "^1.0.0",
     "pg": "^8.11.0",
@@ -28,7 +31,10 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "socket.io": "^4.6.2",
-    "ts-loader": "^9.4.3"
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsc": "^2.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
@@ -38,6 +44,7 @@
     "@types/react-dom": "^18.2.4",
     "babel-loader": "^9.1.2",
     "html-webpack-plugin": "^5.5.1",
+    "nodemon": "^2.0.22",
     "typescript": "^5.1.3",
     "webpack": "^5.85.1",
     "webpack-cli": "^5.1.3",
