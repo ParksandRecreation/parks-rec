@@ -4,10 +4,9 @@ body{
     background: #d4f1ff;
     height: 100%;
     width: 100%;
-    
+    overflow:hidden;
+   
 }
-
-
 
 .Navbar-login{
     background-color: #FFB703;
@@ -24,6 +23,7 @@ body{
 	padding: 15px;	
 	width: 30em;
 	margin: 10% auto;
+    margin-bottom: 5%;
 	border-radius: 20px;
 	-webkit-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
 	-moz-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
@@ -37,3 +37,43 @@ body{
     font-size: 1.1em;
 
 }
+
+.img{
+    position: absolute;
+    height: 400px;
+    bottom : 0px;
+}
+
+.tree1{
+    height: 500px;
+    bottom: 0px;
+    left: -140px;
+  
+}
+.tree2{
+    height: 450px;
+    bottom: 0px;
+    left: 50px;
+    
+}
+.tree4{
+    height: 500px;
+    bottom: 0px;
+    right: -140px;
+    
+}
+
+.tree5{
+    height: 400px;
+    bottom: 0px;
+    right: 0px;
+    
+}
+
+.camper{
+    bottom: -86px;
+    right: 0px;
+}
+
+/* Navbar Styling */
+
