@@ -1,6 +1,5 @@
-node_modules
-/package
+/node_modules
 .DS_Store
 /dist
-/build
 .env
+package-lock.json
