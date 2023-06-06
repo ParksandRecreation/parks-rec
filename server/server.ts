@@ -1,15 +1,24 @@
-import express from 'express';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-import { Request, Response, NextFunction } from 'express';
 import path from 'path';
-
+import socket from 'socket.io';
+import http from 'http';
+import express, {
+  Request,
+  Response,
+  NextFunction,
+  ErrorRequestHandler,
+} from 'express';
+import loginRoute from './routes/loginRoute';
+// const loginRoute = require('./routes/loginRoute');
+// const path = require('path');
+// const socket = require('socket.io');
+// const http = require('http');
+// const express = require('express');
 const app = express();
-const server = createServer(app);
-const io = new Server(server, {
+const server = http.createServer(app);
+const io = new socket.Server(server, {
   cors: {
-    origin: 'http://localhost:8080'
-  }
+    origin: 'http://localhost:8080',
+  },
 });
 
 const PORT: number = 3000;
@@ -22,21 +31,31 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // serve index.html
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.sendFile(path.resolve(__dirname, '../dist/index.html'));
 });
 
+// oath route
+app.use('/login', loginRoute);
+
 // express global error handler (use any for error type until we define custom error type later)
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  const defaultErr = {
-    log: 'Express error handler caught unknown middleware error',
-    status: 400,
-    message: { err: 'An error occurred' },
-  };
-  const errorObj = Object.assign(defaultErr, err);
-  console.log(errorObj.log);
-  return res.status(errorObj.status).json(errorObj.message);
-});
+app.use(
+  (
+    err: ErrorRequestHandler,
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const defaultErr = {
+      log: 'Express error handler caught unknown middleware error',
+      status: 400,
+      message: { err: 'An error occurred' },
+    };
+    const errorObj = Object.assign(defaultErr, err);
+    console.log(errorObj.log);
+    return res.status(errorObj.status).json(errorObj.message);
+  }
+);
 
 server.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);

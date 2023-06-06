@@ -1,10 +1,11 @@
-
+import React from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 
 const LoginPage = () => {
+
     const navigate = useNavigate();
 
   const loginToGoogle = () => {
@@ -36,5 +37,6 @@ const LoginPage = () => {
         </>
     )
 }
+
 
 export default LoginPage;
