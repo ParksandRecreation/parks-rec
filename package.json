@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@react-oauth/google": "^0.11.0",
+    "@types/pg": "^8.10.2",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
@@ -22,6 +23,7 @@
     "http": "^0.0.1-security",
     "mini-css-extract-plugin": "^2.7.6",
     "module_name": "^1.0.0",
+    "pg": "^8.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
