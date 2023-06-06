@@ -2,6 +2,7 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import tree from '../assets/tree.png';
+import camper from '../assets/camper.png';
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -26,7 +27,12 @@ const LoginPage = () => {
             <h1>Login with Google</h1>
             <button onClick={() => loginToGoogle()}> Login</button>
         </div>
-        <img className="tree" src={tree}/>
+        <img className="img tree1" src={tree}/>
+        <img className="img tree2" src={tree}/>
+        <img className="img" src={tree}/>
+        <img className="img tree4" src={tree}/>
+        <img className="img tree5" src={tree}/>
+        <img className="img camper" src={camper}/>
         </>
     )
 }
