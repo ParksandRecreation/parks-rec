@@ -12,6 +12,8 @@ const io = new Server(server, {
   }
 });
 
+app.set('io', io);
+
 const PORT: number = 3000;
 
 // parse both JSON and URL-encoded form data from React app
