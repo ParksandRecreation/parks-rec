@@ -1,0 +1,39 @@
+html,
+body{
+    margin: 0px;
+    background: #d4f1ff;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
+.Navbar-login{
+    background-color: #FFB703;
+    width:100%;
+    padding: 3px;
+    text-align:center;
+    font-size: 1.2rem;
+}
+
+.loginContainer{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;	
+	width: 30em;
+	margin: 10% auto;
+	border-radius: 20px;
+	-webkit-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
+	-moz-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
+	box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);	
+}
+
+.loginContainer button{
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1em;
+
+}
