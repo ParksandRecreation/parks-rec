@@ -76,4 +76,72 @@ body{
 }
 
 /* Navbar Styling */
+.Navbar{
+    display: flex;
+    background-color: #FFB703;
+    width:100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    justify-content: end;
 
+}
+
+.Navbar a{
+   text-decoration: none;
+   color: #000;
+   font-size: 1.2em;
+   margin-right: 40px;
+}
+
+/* Login Page */
+
+.homepageContainer{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;	
+	width: 30em;
+	margin: 10% auto;
+    margin-bottom: 5%;
+	border-radius: 20px;
+	-webkit-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
+	-moz-box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);
+	box-shadow: 3px 3px 28px 1px rgba(77,77,77,0.74);	
+}
+
+.homepageContainer form{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+.homepageContainer form input{
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+.homepageContainer .btns{
+    margin: 10px;
+    padding: 10px;
+}
+
+.homepageContainer .btns button{
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #FB8500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 2px 20px 1px rgba(77,77,77,0.74);
+	-moz-box-shadow: 1px 2px 20px 1px rgba(77,77,77,0.74);
+	box-shadow: 1px 2px 20px 1px rgba(77,77,77,0.74);	
+}
+
+.homepageContainer .btns button:hover{
+    background-color: #c96c01;
+    
+}
