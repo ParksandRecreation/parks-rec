@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 import { useNavigate } from 'react-router-dom';
+import { images } from '../data/avatars';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -10,9 +11,9 @@ const HomePage = () => {
     navigate('/room');
   };
   const userName = localStorage.getItem('given_name') || 'friend';
-  const pic =
-    localStorage.getItem('picture') ||
-    'https://avatars.githubusercontent.com/u/135664949?s=400&v=4';
+  const imgIndex = Math.floor(Math.random() * images.length);
+  const pic = images[imgIndex];
+
   return (
     <>
       <Navbar />
