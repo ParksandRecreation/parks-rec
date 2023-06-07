@@ -7,7 +7,7 @@ body{
     overflow:hidden;
    
 }
-
+/* LoginPage Styling */
 .Navbar-login{
     background-color: #FFB703;
     width:100%;
@@ -48,37 +48,44 @@ body{
 
 .img, .gr_img{
     position: absolute;
-    height: 400px;
+    height: 45%;
+    width: 30%;
     bottom : 0px;
 }
 
 .tree1{
-    height: 500px;
+    height: 55%;
+    width: 30%;
     bottom: 0px;
     left: -140px;
   
 }
 .tree2{
-    height: 450px;
+    height: 50%;
+    width: 30%;
     bottom: 0px;
     left: 50px;
     
 }
 .tree4{
-    height: 500px;
+    height: 55%;
+    width: 30%;
     bottom: 0px;
     right: -140px;
     
 }
 
 .tree5{
-    height: 400px;
+    height: 50%;
+    width: 30%;
     bottom: 0px;
     right: 0px;
     
 }
 
 .camper{
+    height:45%;
+    width: 30%;
     bottom: -86px;
     right: 0px;
 }
@@ -233,4 +240,8 @@ body{
 .park_image{
     height:inherit;
     width:inherit;
+}
+
+@media screen {
+    
 }
