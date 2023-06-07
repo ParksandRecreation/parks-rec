@@ -9,8 +9,23 @@ const LoginPage = () => {
 
   const loginToGoogle = useGoogleLogin({
     onSuccess: tokenResponse => {
+      const access_token = tokenResponse.access_token;
       localStorage.setItem('loginWith', 'Google');
-      localStorage.setItem('accessToken', tokenResponse.access_token);
+      localStorage.setItem('accessToken', access_token);
+      // pass the access token to backend to get userInfo
+      fetch(
+        'http://localhost:3000/login/oauth?accessToken=' +
+          `${access_token}`,
+        {
+          mode: 'cors',
+        }
+      )
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          localStorage.setItem('given_name', data.given_name);
+          localStorage.setItem('picture', data.picture);
+        });
       navigate('/home');
     },
   });
