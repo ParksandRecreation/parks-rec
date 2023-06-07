@@ -8,6 +8,7 @@ const Navbar = () => {
     localStorage.removeItem('given_name');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('picture');
+    localStorage.removeItem('loginWith');
   };
 
   return (

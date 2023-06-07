@@ -286,4 +286,8 @@ body {
     .img, .gr_img{
        display: none
     }
+
+.alert {
+  color: red;
+
 }

@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 import { parkInfo } from '../../parkData';
+import { Timer } from '../components/Timer';
 
 interface Park {
   parkName?: string;
@@ -20,7 +21,8 @@ const GameRoom = () => {
 
   //randomly choose which park to display
   const displayPark = (): void => {
-    const correctPark = parkInfo[Math.floor(Math.random() * parkInfo.length)];
+    const correctPark =
+      parkInfo[Math.floor(Math.random() * parkInfo.length)];
     setCurrentPark(correctPark);
 
     //get other options
@@ -30,7 +32,9 @@ const GameRoom = () => {
     // ]);
 
     // Get other options
-    const otherParks = parkInfo.filter((park: Park) => park !== correctPark);
+    const otherParks = parkInfo.filter(
+      (park: Park) => park !== correctPark
+    );
     const otherParkNames = shuffle(
       otherParks.map((park: Park) => park.parkName)
     );
@@ -55,13 +59,11 @@ const GameRoom = () => {
 
   return (
     <>
-    {/* <div className = "modal">
-     <button className="startbtn">Start Game!</button> */}
-      <Navbar /> 
-        <div className="mainContainer">
-          <div className="counter">
-            <span>00:00</span>
-          </div>
+      <Navbar />
+      <div className="mainContainer">
+        <div className="counter">
+          <Timer />
+        </div>
 
          <div className="gameRoomContainer">
           <h2>Guess the National Park...</h2>

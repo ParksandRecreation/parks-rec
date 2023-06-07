@@ -25,8 +25,8 @@ const LoginPage = () => {
           console.log(data);
           localStorage.setItem('given_name', data.given_name);
           localStorage.setItem('picture', data.picture);
+          navigate('/home');
         });
-      navigate('/home');
     },
   });
 
