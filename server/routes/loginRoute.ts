@@ -12,4 +12,4 @@ router.get('/userData', (req: any, res: any) => {
     .then((res: any) => res.json(res));
 });
 
-module.exports = router;
+export default router;

@@ -5,4 +5,4 @@ export {
   Request,
   Response,
   NextFunction
-}
+};

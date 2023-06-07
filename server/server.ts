@@ -2,6 +2,8 @@ import path from 'path';
 import { Server } from 'socket.io';
 import { createServer } from 'http';
 import { express, Request, Response, NextFunction } from './server-types';
+import loginRoute from './routes/loginRoute';
+import roomHandler from './roomHandler';
 
 const app = express();
 const server = createServer(app);
@@ -10,9 +12,19 @@ const io = new Server(server, {
     origin: 'http://localhost:8080',
   },
 });
-const loginRoute = require('./routes/loginRoute');
 
 app.set('io', io);
+
+const rooms = {};
+
+io.on('connection', socket => {
+  console.log('connected: ', socket.id);
+  roomHandler(io, socket, rooms);
+  
+  socket.on('disconnect', () => {
+    console.log('disconnected', socket.id);
+  });
+})
 
 const PORT: number = 3000;
 
