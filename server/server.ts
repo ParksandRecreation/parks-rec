@@ -6,8 +6,8 @@ import loginRoute from './routes/loginRoute';
 import roomHandler from './roomHandler';
 
 const app = express();
-const server = http.createServer(app);
-const io = new socket.Server(server, {
+const server = createServer(app);
+const io = new Server(server, {
   cors: {
     origin: 'http://localhost:8080',
   },
@@ -46,7 +46,7 @@ app.use('/login', loginRoute);
 // express global error handler (use any for error type until we define custom error type later)
 app.use(
   (
-    err: ErrorRequestHandler,
+    err: any,
     req: Request,
     res: Response,
     next: NextFunction
