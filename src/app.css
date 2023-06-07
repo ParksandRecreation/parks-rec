@@ -239,3 +239,7 @@ body {
   height: inherit;
   width: inherit;
 }
+
+.alert {
+  color: red;
+}

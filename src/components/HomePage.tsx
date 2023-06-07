@@ -3,16 +3,17 @@ import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 import { useNavigate } from 'react-router-dom';
+import { images } from '../data/avatars';
 
 const HomePage = () => {
   const navigate = useNavigate();
   const handleCreateRoomBtn = () => {
     navigate('/room');
   };
-  const userName = localStorage.getItem('given_name') || 'friend'; // need to trigger re-render when user log in
-  const pic =
-    localStorage.getItem('picture') ||
-    'https://avatars.githubusercontent.com/u/135664949?s=400&v=4';
+  const userName = localStorage.getItem('given_name') || 'friend';
+  const imgIndex = Math.floor(Math.random() * images.length);
+  const pic = images[imgIndex];
+
   return (
     <>
       <Navbar />
@@ -26,8 +27,6 @@ const HomePage = () => {
               alt="profile picture"
             ></img>
           </div>
-
-          {/* Not being updated after login */}
           <h4>Enter or Create Room ID to Join the Game</h4>
           <input placeholder="Room ID" />
           <div className="btns">
