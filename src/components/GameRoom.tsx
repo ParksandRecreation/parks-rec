@@ -11,11 +11,11 @@ return(
     <>
 
      <Navbar />
-     <div className = "mainContainer">
-    <div className="counter">
-        <span>00:00</span>
-    </div>
-      <div className="gameRoomContainer">
+    <div className = "mainContainer">
+        <div className="counter">
+            <span>00:00</span>
+        </div>
+        <div className="gameRoomContainer">
         <h2>Guess the National Park...</h2>
         <div className="imageContainer">
         {/* Insert Image here */}
