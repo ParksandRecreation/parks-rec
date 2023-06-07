@@ -5,7 +5,7 @@ import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 import { parkInfo } from '../../parkData';
 import { Timer } from '../components/Timer';
-import io from 'socket.io-client';
+import { io, Socket } from 'socket.io-client';
 
 interface Park {
   parkName?: string;
@@ -16,6 +16,7 @@ const fallbackImageUrl =
 const GameRoom = () => {
   const [currentPark, setCurrentPark] = useState<Park | null>(null);
   const [options, setOptions] = useState<string[]>([]);
+  const [socket, setSocket] = useState<Socket | null>(null);
   const location = useLocation();
   const { userName, roomName, create } = location.state;
 
@@ -33,6 +34,7 @@ const GameRoom = () => {
       socket.disconnect();
     };
   }, []);
+
 
   //randomly choose which park to display
   const displayPark = (): void => {
@@ -62,16 +64,6 @@ const GameRoom = () => {
     //
     setOptions(multipleChoice);
   };
-
-  //helper function to shuffle the choices
-  const shuffle = (array: any[]): any[] => {
-    for (let i: number = array.length - 1; i > 0; i--) {
-      const j: number = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
-    
 
   //helper function to shuffle the choices
   const shuffle = (array: any[]): any[] => {
