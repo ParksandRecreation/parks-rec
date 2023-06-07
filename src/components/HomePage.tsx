@@ -9,7 +9,7 @@ const HomePage = () => {
   const handleCreateRoomBtn = () => {
     navigate('/room');
   };
-  const userName = localStorage.getItem('given_name') || 'friend'; // need to trigger re-render when user log in
+  const userName = localStorage.getItem('given_name') || 'friend';
   const pic =
     localStorage.getItem('picture') ||
     'https://avatars.githubusercontent.com/u/135664949?s=400&v=4';
@@ -26,8 +26,6 @@ const HomePage = () => {
               alt="profile picture"
             ></img>
           </div>
-
-          {/* Not being updated after login */}
           <h4>Enter or Create Room ID to Join the Game</h4>
           <input placeholder="Room ID" />
           <div className="btns">
