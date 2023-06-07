@@ -104,6 +104,20 @@ body {
   box-shadow: 3px 3px 28px 1px rgba(77, 77, 77, 0.74);
 }
 
+.formHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px red solid; */
+}
+
+.profile-pic {
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
 .homepageContainer form {
   width: 100%;
   text-align: center;
