@@ -154,7 +154,6 @@ const GameRoom = () => {
         <img className="gr_img tree4" src={tree} />
         <img className="gr_img tree5" src={tree} />
         <img className="gr_img camper" src={camper} />
-      {/* </div> */}
     </>
   );
 };
