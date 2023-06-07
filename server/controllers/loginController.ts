@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 import axios from 'axios';
-import { NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
 dotenv.config();
 
 // export const getUserData = async (accessToken: string) => {
@@ -22,8 +22,8 @@ dotenv.config();
 
 const loginController: any = {};
 loginController.getUserData = async (
-  req: any,
-  res: any,
+  req: Request,
+  res: Response,
   next: NextFunction
 ) => {
   const accessToken = req.query.accessToken;
@@ -37,7 +37,7 @@ loginController.getUserData = async (
         },
       }
     );
-    // console.log('data, ', data);
+    console.log('data, ', data);
     res.locals.userInfo = data;
     return next();
   } catch (err) {
