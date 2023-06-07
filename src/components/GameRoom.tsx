@@ -65,7 +65,7 @@ const GameRoom = () => {
           <Timer />
         </div>
 
-        <div className="gameRoomContainer">
+         <div className="gameRoomContainer">
           <h2>Guess the National Park...</h2>
           {currentPark?.images &&
             currentPark?.images.length > 0 && ( // Added check for currentPark.images
@@ -84,6 +84,7 @@ const GameRoom = () => {
             ))}
           </div>
         </div>
+
         <div className="playerMainContainer">
           <div className="playerContainer">
             <span>Player 1</span>
@@ -94,14 +95,16 @@ const GameRoom = () => {
             <span className="score2">200</span>
           </div>
         </div>
+
       </div>
 
-      <img className="gr_img tree1" src={tree} />
-      <img className="gr_img tree2" src={tree} />
-      <img className="gr_img" src={tree} />
-      <img className="gr_img tree4" src={tree} />
-      <img className="gr_img tree5" src={tree} />
-      <img className="gr_img camper" src={camper} />
+        <img className="gr_img tree1" src={tree} />
+        <img className="gr_img tree2" src={tree} />
+        <img className="gr_img" src={tree} />
+        <img className="gr_img tree4" src={tree} />
+        <img className="gr_img tree5" src={tree} />
+        <img className="gr_img camper" src={camper} />
+      {/* </div> */}
     </>
   );
 };

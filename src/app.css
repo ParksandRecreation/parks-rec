@@ -4,9 +4,9 @@ body {
   background: #d4f1ff;
   height: 100%;
   width: 100%;
-  overflow: hidden;
-}
 
+}
+/* LoginPage Styling */
 .Navbar-login {
   background-color: #ffb703;
   width: 100%;
@@ -47,33 +47,40 @@ body {
 .img,
 .gr_img {
   position: absolute;
-  height: 400px;
+  height: 45%;
+  width: 30%;
   bottom: 0px;
 }
 
 .tree1 {
-  height: 500px;
+  height: 55%;
+  width: 30%;
   bottom: 0px;
   left: -140px;
 }
 .tree2 {
-  height: 450px;
+  height: 50%;
+  width: 30%;
   bottom: 0px;
   left: 50px;
 }
 .tree4 {
-  height: 500px;
+  height: 55%;
+  width: 30%;
   bottom: 0px;
   right: -140px;
 }
 
 .tree5 {
-  height: 400px;
+  height: 50%;
+  width: 30%;
   bottom: 0px;
   right: 0px;
 }
 
 .camper {
+  height:45%;
+  width: 30%;
   bottom: -86px;
   right: 0px;
 }
@@ -162,10 +169,21 @@ body {
 }
 
 /* GameRoom Styling */
+/* .modal{
+    position: relative;  
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(255,255,255,0.1);
+    z-index:-1;
+    
+} */
 .mainContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 35%;
 }
 
 .gameRoomContainer {
@@ -190,11 +208,13 @@ body {
 .btnContainer {
   display: flex;
   justify-content: space-evenly;
+  width: 60%;
+  flex-wrap: wrap;
   margin: 10px;
 }
 
-.btnContainer button {
-  width: 230px;
+.btnContainer button {   
+  width: 43%;
   padding: 25px;
   margin: 5px;
   font-size: 18px;
@@ -213,6 +233,7 @@ body {
   margin: 30px;
   font-size: 50px;
   padding: 20px;
+  text-align: center;
 }
 
 .playerMainContainer {
@@ -240,6 +261,33 @@ body {
   width: inherit;
 }
 
+@media screen and (max-width: 1300px) {
+ .btnContainer {
+    width: 90%;
+ }
+ .img, .gr_img{
+    height: 35%;
+    width: 30%;
+ }
+}
+
+@media screen and (max-width: 700px){
+  .img, .gr_img{
+     height: 30%;
+     width: 20%;
+  }
+}
+
+@media screen and (max-width: 800px){
+   .mainContainer{
+      flex-direction: column;
+      align-items: center;    
+    }
+    .img, .gr_img{
+       display: none
+    }
+
 .alert {
   color: red;
+
 }
