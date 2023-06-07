@@ -24,11 +24,11 @@ return(
         </div>
     </div>
     <img className="gr_img tree1" src={tree}/>
-        <img className="gr_img tree2" src={tree}/>
-        <img className="gr_img" src={tree}/>
-        <img className="gr_img tree4" src={tree}/>
-        <img className="gr_img tree5" src={tree}/>
-        <img className="gr_img camper" src={camper}/>
+    <img className="gr_img tree2" src={tree}/>
+    <img className="gr_img" src={tree}/>
+    <img className="gr_img tree4" src={tree}/>
+    <img className="gr_img tree5" src={tree}/>
+    <img className="gr_img camper" src={camper}/>
     
     </>
    
