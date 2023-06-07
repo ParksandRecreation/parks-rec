@@ -14,7 +14,7 @@ const LoginPage = () => {
     //         localStorage.setItem('accessToken', tokenResponse.access_token)
     //     navigate('/home')
     //   },
-    navigate('/home');
+    navigate('/home'); // data.given_name from Carolyn's PR
     }
 
     return(

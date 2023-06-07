@@ -1,16 +1,50 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import io from 'socket.io-client';
 
 const HomePage = () => {
+    const inputRef = useRef<HTMLInputElement | null>(null);
+    const location = useLocation();
     const navigate = useNavigate();
     const handleCreateRoomBtn = () => {
-       
+        const username: string | null = location.state?.username || null;
+        const roomName: string | null = inputRef.current?.value || null;
+        console.log('roomName: ', roomName);
 
-        navigate('/room');
-    }
+        const socket = io('http://localhost:3000');
+        socket.emit('createRoom', { username, roomName });
+        socket.on('roomCreated', roomName => {
+            console.log('Successfully created room: ', roomName);
+            navigate(`/room/${roomName}`, { state: { username: 'test' }});
+        });
+
+        socket.on('createFailed', roomName => {
+            console.log('That room is already taken!');
+            if (inputRef.current) inputRef.current.value = '';
+        })
+        
+    };
+
+    const handleJoinRoomBtn = () => {
+        const username: string | null = location.state?.username || null;
+        const roomName: string | null = inputRef.current?.value || null;
+        console.log('roomName: ', roomName);
+
+        const socket = io('http://localhost:3000');
+        socket.emit('joinRoom', { username, roomName });
+        socket.on('roomJoined', roomName => {
+            console.log('Successfully joined room: ', roomName);
+            navigate(`/room/${roomName}`, { state: { username: 'test' }});
+        });
+
+        socket.on('joinFailed', roomName => {
+            console.log('That room is already full!');
+            if (inputRef.current) inputRef.current.value = '';
+        })
+    };
 
  return (
     <>
@@ -19,10 +53,10 @@ const HomePage = () => {
             <form>
                 <h2>Welcome, username</h2>
                 <h4>Enter or Create Room ID to Join the Game</h4>
-                <input placeholder='Room ID' />
+                <input type='text' placeholder='Room ID' ref={inputRef} />
                 <div className='btns'>
-                    <button className='btn1' onClick={() => handleCreateRoomBtn()}>Create Room</button>
-                    <button className='btn2' onClick={() => handleCreateRoomBtn()}>Join Room</button>
+                    <button className='btn1' type='button' onClick={handleCreateRoomBtn}>Create Room</button>
+                    <button className='btn2' type='button' onClick={handleJoinRoomBtn}>Join Room</button>
                 </div>               
             </form>
         </div>

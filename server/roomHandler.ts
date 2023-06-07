@@ -1,13 +1,17 @@
 // client will emit an object with username and roomName
-type payload = {
+type Payload = {
   username: string,
   roomName: string
 }
 
-const roomHandler = (io, socket, rooms) => {
-  const create = (payload: payload): void => {
+// use any type for now
+const roomHandler = (io: any, socket: any, rooms: any) => {
+  const create = (payload: Payload): void => {
     // if room already exists, emit failure event
-    if (rooms.hasOwnProperty(payload.roomName)) return socket.emit('createFailed', payload.roomName);
+    if (rooms.hasOwnProperty(payload.roomName)) {
+      socket.emit('createFailed', payload.roomName);
+      return socket.disconnect();
+    }
     // if room doesn't exist, create and join room and emit success event
     socket.join(payload.roomName);
     rooms[payload.roomName] = {
@@ -18,10 +22,11 @@ const roomHandler = (io, socket, rooms) => {
     socket.emit('roomCreated', payload.roomName);
   }
 
-  const join = (payload: payload): void => {
+  const join = (payload: Payload): void => {
     // if room doesn't exist or there are already 2 players, emit failure event
     if (!rooms.hasOwnProperty(payload.roomName) || Object.keys(rooms[payload.roomName]).length === 2) {
-      return socket.emit('joinFailed', payload.roomName); 
+      socket.emit('joinFailed', payload.roomName); 
+      return socket.disconnect();
     }
     // if room exists, join room and emit success event
     socket.join(payload.roomName);

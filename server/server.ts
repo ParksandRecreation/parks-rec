@@ -43,6 +43,11 @@ app.get('/', (req: Request, res: Response) => {
 // oath route
 app.use('/login', loginRoute);
 
+// catch-all route handler
+app.get('*', (req: Request, res: Response) => {
+  res.sendFile(path.resolve(__dirname, '../dist/index.html'));
+});
+
 // express global error handler (use any for error type until we define custom error type later)
 app.use(
   (

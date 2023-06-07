@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
