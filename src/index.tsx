@@ -6,7 +6,6 @@ import App from './App';
 import '../src/app.css';
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '';
-console.log('this is the GoogleID: ', GOOGLE_CLIENT_ID);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

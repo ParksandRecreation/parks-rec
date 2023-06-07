@@ -24,7 +24,9 @@ const LoginPage = () => {
       </nav>
       <div className="loginContainer">
         <h1>Login with Google</h1>
-        <button onClick={() => loginToGoogle()}> Login</button>
+        <button className="loginBtn" onClick={() => loginToGoogle()}>
+          Log In
+        </button>
       </div>
       <img className="img tree1" src={tree} />
       <img className="img tree2" src={tree} />
