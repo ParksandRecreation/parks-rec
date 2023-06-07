@@ -20,22 +20,6 @@ const GameRoom = () => {
   const location = useLocation();
   const { userName, roomName, create } = location.state;
 
-  useEffect(() => {
-    displayPark();
-    const socket = io('http://localhost:3000');
-    console.log('create: ', create);
-    console.log('userName: ', userName);
-    console.log('roomName: ', roomName);
-    if (create) socket.emit('createRoom', { userName, roomName });
-    else socket.emit('joinRoom', { userName, roomName });
-
-    // Clean up the socket connection when the component unmounts
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
-
-
   //randomly choose which park to display
   const displayPark = (): void => {
     const correctPark =
@@ -74,6 +58,55 @@ const GameRoom = () => {
     return array;
   };
 
+  // disable buttons after a selection
+  function disableAllButtons() {
+    const container = document.querySelector('.btnContainer');
+    const buttons = container?.getElementsByTagName('button');
+    
+    if (buttons) {
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+      }
+    }
+  }
+
+  // validate user selection
+  const handleClick = (event: any) => {
+    const value = event.target.textContent;
+    console.log('value: ', value);
+    console.log('event: ', event.target.style);
+
+    if (value === currentPark?.parkName) {
+      // make button green
+      event.target.style.backgroundColor = "green";
+      // socket?.
+    } else {
+      // make button red
+      event.target.style.backgroundColor = "red";
+    }
+    // disable buttons
+    disableAllButtons();
+
+    // emit event to server to serve new park
+    
+  }
+
+  useEffect(() => {
+    displayPark();
+    const socket = io('http://localhost:3000');
+    setSocket(socket);
+    console.log('create: ', create);
+    console.log('userName: ', userName);
+    console.log('roomName: ', roomName);
+    if (create) socket.emit('createRoom', { userName, roomName });
+    else socket.emit('joinRoom', { userName, roomName });
+
+    // Clean up the socket connection when the component unmounts
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -97,7 +130,7 @@ const GameRoom = () => {
             )}
           <div className="btnContainer">
             {options.map((options: string, index: number) => (
-              <button key={index}>{options}</button>
+              <button key={index} onClick={handleClick}>{options}</button>
             ))}
           </div>
         </div>
@@ -121,8 +154,9 @@ const GameRoom = () => {
         <img className="gr_img tree4" src={tree} />
         <img className="gr_img tree5" src={tree} />
         <img className="gr_img camper" src={camper} />
-      {/* </div> */}
     </>
   );
 };
 export default GameRoom;
+
+
