@@ -6,8 +6,8 @@ import loginRoute from './routes/loginRoute';
 import roomHandler from './roomHandler';
 
 const app = express();
-const server = createServer(app);
-const io = new Server(server, {
+const server = http.createServer(app);
+const io = new socket.Server(server, {
   cors: {
     origin: 'http://localhost:8080',
   },
@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // serve index.html
-app.get('/', (req: any, res: any) => {
+app.get('/', (req: Request, res: Response) => {
   res.sendFile(path.resolve(__dirname, '../dist/index.html'));
 });
 
@@ -44,16 +44,23 @@ app.get('/', (req: any, res: any) => {
 app.use('/login', loginRoute);
 
 // express global error handler (use any for error type until we define custom error type later)
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  const defaultErr = {
-    log: 'Express error handler caught unknown middleware error',
-    status: 400,
-    message: { err: 'An error occurred' },
-  };
-  const errorObj = Object.assign(defaultErr, err);
-  console.log(errorObj.log);
-  return res.status(errorObj.status).json(errorObj.message);
-});
+app.use(
+  (
+    err: ErrorRequestHandler,
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const defaultErr = {
+      log: 'Express error handler caught unknown middleware error',
+      status: 400,
+      message: { err: 'An error occurred' },
+    };
+    const errorObj = Object.assign(defaultErr, err);
+    console.log(errorObj.log);
+    return res.status(errorObj.status).json(errorObj.message);
+  }
+);
 
 server.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
