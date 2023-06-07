@@ -8,7 +8,7 @@ Can you guess the parks based on photos?
 ### Technologies and concepts explored:
 
 - Full-stack web development using:
-  - TypScript, ReactJS (React Router, hooks), Bootstrap, NodeJS, Express, WebSockets, SQL database, Webpack, 3rd party APIs
+  - TypeScript, ReactJS (React Router, hooks), Bootstrap, NodeJS, Express, WebSockets, SQL database, Webpack, 3rd party APIs
 - Authentication and Open Authorization (OAuth)
 - Testing with Jest
 
