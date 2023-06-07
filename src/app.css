@@ -35,7 +35,15 @@ body{
     border-radius: 8px;
     border: none;
     font-size: 1.1em;
+    background-color: #FB8500;
+    cursor: pointer;
+    color: #fff;
 
+
+}
+
+.loginContainer button:hover{
+    background-color: #c96c01;
 }
 
 .img, .gr_img{
@@ -147,11 +155,17 @@ body{
 }
 
 /* GameRoom Styling */
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .gameRoomContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 .imageContainer{
@@ -159,6 +173,7 @@ body{
     height: 350px;
     width: 450px;
     border: 15px solid #023047;
+   
 }
 
 .gr_img{
@@ -182,4 +197,40 @@ body{
     color: white;
     border-radius: 15px;
 
+}
+
+.btnContainer button:hover{
+    background-color: #c96c01;
+}
+
+.counter{
+    width:300px;
+    margin: 30px;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.playerMainContainer{
+    width: 300px;
+    margin: 30px;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.playerContainer{
+    margin: 15px;
+    padding: 25px;
+    background-color: #023047;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.playerContainer span{
+    display: block;
+}
+
+.park_image{
+    height:inherit;
+    width:inherit;
 }
