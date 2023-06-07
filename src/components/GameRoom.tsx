@@ -5,10 +5,11 @@ import camper from '../assets/camper.png';
 import { parkInfo } from '../../parkData';
 
 interface Park {
-  parkName: string;
-  images: string[];
+  parkName?: string;
+  images?: string[];
 }
-
+const fallbackImageUrl =
+  'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmorethanjustparks.com%2Flist-of-national-parks-by-state%2F&psig=AOvVaw3WxY_SMztkVJbwPi8e_kiW&ust=1686242208103000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODxr_LLsf8CFQAAAAAdAAAAABAE';
 const GameRoom = () => {
   const [currentPark, setCurrentPark] = useState<Park | null>(null);
   const [options, setOptions] = useState<string[]>([]);
@@ -23,10 +24,23 @@ const GameRoom = () => {
     setCurrentPark(correctPark);
 
     //get other options
-    const multipleChoice: any[] = shuffle([
-      currentPark.parkName,
-      parkInfo.map((park: Park) => park.parkName),
+    // const multipleChoice: any[] = shuffle([
+    //   currentPark?.parkName,
+    //   parkInfo.map((park: Park) => park.parkName),
+    // ]);
+
+    // Get other options
+    const otherParks = parkInfo.filter((park: Park) => park !== correctPark);
+    const otherParkNames = shuffle(
+      otherParks.map((park: Park) => park.parkName)
+    );
+
+    // Construct the multiple choice array with the correct park and other park names
+    const multipleChoice: string[] = shuffle([
+      correctPark.parkName,
+      ...otherParkNames.slice(0, 3), // Take the first 3 other park names
     ]);
+    //
     setOptions(multipleChoice);
   };
 
@@ -44,21 +58,22 @@ const GameRoom = () => {
       <Navbar />
       <div className="gameRoomContainer">
         <h2>Guess the National Park...</h2>
-        {currentPark && (
-          <div className="imageContainer">
-            <img src={currentPark.images[0]} alt={currentPark.parkName} />
-          </div>
-        )}
+        {currentPark?.images &&
+          currentPark?.images.length > 0 && ( // Added check for currentPark.images
+            <div className="imageContainer">
+              <img
+                src={currentPark?.images[0] || fallbackImageUrl}
+                alt={currentPark.parkName}
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
+              />
+            </div>
+          )}
         <div className="btnContainer">
           {options.map((options: string, index: number) => (
             <button key={index}>{options}</button>
           ))}
-          {/* <button>Yellowstone National Park</button>
-          <button>Acadia National Park</button> */}
         </div>
         <div className="btnContainer">
-          {/* <button>Yosemite National Park</button>
-          <button>Grand Canyon National Park</button> */}
         </div>
       </div>
       <img className="gr_img tree1" src={tree} />
