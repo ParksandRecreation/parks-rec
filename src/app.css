@@ -29,8 +29,8 @@ body {
 }
 
 .loginBtn {
-  padding: 15px 20px;
-  border-radius: 8px;
+  padding: 1rem 1.6rem;
+  border-radius: 99999px;
   border: none;
   font-size: 1.1em;
   background-color: #fb8500;
@@ -260,6 +260,23 @@ body {
   width: inherit;
 }
 
+.countdown {
+  margin-bottom: 0;
+}
+.alert {
+  color: red;
+}
+
+.resetBtn {
+  padding: 0.5em 1em;
+  border-radius: 2rem;
+  border: 1px solid rgb(78, 77, 77);
+  background-color: #fb8500;
+}
+.resetBtn:hover {
+  background-color: #c96c01;
+}
+
 @media screen and (max-width: 1300px) {
   .btnContainer {
     width: 90%;
@@ -288,7 +305,4 @@ body {
   .gr_img {
     display: none;
   }
-}
-.alert {
-  color: red;
 }

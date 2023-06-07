@@ -50,7 +50,9 @@ export const Timer = () => {
   return (
     <div className="countdownWrapper">
       <h2 className={`${alert ? 'alert' : ''} countdown`}>{timer}</h2>
-      <button onClick={onClickReset}>Reset</button>
+      <button className="resetBtn" onClick={onClickReset}>
+        Reset
+      </button>
     </div>
   );
 };
