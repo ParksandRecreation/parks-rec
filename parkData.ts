@@ -1,11 +1,12 @@
-[{
-   parkName: 'Acadia National Park',
+export const parkInfo: any = [
+  {
+    parkName: 'Acadia National Park',
     images: [
       'https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B477B-1DD8-B71B-0BCB48E009241BAA.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7B48F9-1DD8-B71B-0BD3B413E58978F8.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7B48F9-1DD8-B71B-0BD3B413E58978F8.jpg',
+    ],
   },
   {
     parkName: 'Arches National Park',
@@ -14,8 +15,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C79931C-1DD8-B71B-0BF201E3DB540D04.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A0B2B-1DD8-B71B-0BE0E26B0740AA6B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A0C49-1DD8-B71B-0B460D58D6E83B40.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A0DE5-1DD8-B71B-0BFBE720788EF4A3.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A0DE5-1DD8-B71B-0BFBE720788EF4A3.jpg',
+    ],
   },
   {
     parkName: 'Badlands National Park',
@@ -24,8 +25,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C82ED5D-1DD8-B71B-0B2F33D3B39D6D1B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C82EBFE-1DD8-B71B-0B21072718DB2A95.jpg',
       'https://www.nps.gov/common/uploads/structured_data/28C2C88B-9904-7962-E60BEFC763604963.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/36C156B0-F6CA-1972-F3B88C971DE39767.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/36C156B0-F6CA-1972-F3B88C971DE39767.jpg',
+    ],
   },
   {
     parkName: 'Big Bend National Park',
@@ -41,8 +42,8 @@
       'https://www.nps.gov/common/uploads/structured_data/8BC4F255-E417-0A7C-272244055AA3F832.jpg',
       'https://www.nps.gov/common/uploads/structured_data/C0B5E9B0-CD44-E6CF-C56A5DA23CFB65E6.jpg',
       'https://www.nps.gov/common/uploads/structured_data/C0C2DD15-D536-D952-114F8FD11C5296FD.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/CDAD3984-DB8E-117C-DFA6B184E5058201.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/CDAD3984-DB8E-117C-DFA6B184E5058201.jpg',
+    ],
   },
   {
     parkName: 'Biscayne National Park',
@@ -52,15 +53,15 @@
       'https://www.nps.gov/common/uploads/structured_data/E789390E-C7B5-2B1F-13974FC0EA9C7BD6.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C870833-1DD8-B71B-0BE93D49E0DF6503.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C870A07-1DD8-B71B-0B9BA7F6549AD537.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C871441-1DD8-B71B-0BBD1985ADA0E585.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C871441-1DD8-B71B-0BBD1985ADA0E585.jpg',
+    ],
   },
   {
     parkName: 'Black Canyon Of The Gunnison National Park',
     images: [
       'https://www.nps.gov/common/uploads/structured_data/3C81655F-1DD8-B71B-0B4BCFFDB74EE723.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C8166E8-1DD8-B71B-0BDEB9A4EEEED807.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C8166E8-1DD8-B71B-0BDEB9A4EEEED807.jpg',
+    ],
   },
   {
     parkName: 'Bryce Canyon National Park',
@@ -69,8 +70,8 @@
       'https://www.nps.gov/common/uploads/structured_data/600067EF-E1B2-18B1-6120394EC23521DB.jpg',
       'https://www.nps.gov/common/uploads/structured_data/613FFA94-B2F5-FBBF-090B96462B7CAB18.jpg',
       'https://www.nps.gov/common/uploads/structured_data/60400EC2-B3DA-DAD5-18BF97EA3403B692.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/609317A5-D0B1-4B67-C2413B5852192FB6.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/609317A5-D0B1-4B67-C2413B5852192FB6.jpg',
+    ],
   },
   {
     parkName: 'Canyonlands National Park',
@@ -80,8 +81,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A4FC2-1DD8-B71B-0B13118C99270C08.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A5534-1DD8-B71B-0B3887A48C037633.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A5677-1DD8-B71B-0BD6CF7287668A78.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A5840-1DD8-B71B-0B3C87EB4677BFA5.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A5840-1DD8-B71B-0B3C87EB4677BFA5.jpg',
+    ],
   },
   {
     parkName: 'Capitol Reef National Park',
@@ -90,8 +91,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C82E4FB-1DD8-B71B-0B8614194A6D08FA.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C82E601-1DD8-B71B-0BCB6A40DE28B1CB.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C82E740-1DD8-B71B-0B6FC6B644FB96D0.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C82E9BB-1DD8-B71B-0B30AEA8D8052350.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C82E9BB-1DD8-B71B-0B30AEA8D8052350.jpg',
+    ],
   },
   {
     parkName: 'Carlsbad Caverns National Park',
@@ -101,8 +102,8 @@
       'https://www.nps.gov/common/uploads/structured_data/2A625FD0-AED3-63A2-C91828ED61F916C3.jpg',
       'https://www.nps.gov/common/uploads/structured_data/2B40AD3D-DDDB-2F2E-1CB524F96FF08C4B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/2C9EB52A-BD34-F69C-0149C92FF24E215D.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/2D096B53-E322-75F6-A065872E1CAB9EE6.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/2D096B53-E322-75F6-A065872E1CAB9EE6.jpg',
+    ],
   },
   {
     parkName: 'Channel Islands National Park',
@@ -111,14 +112,14 @@
       'https://www.nps.gov/common/uploads/structured_data/8E0CA65D-0CF8-87C6-DE4B4AA7AAC02DEA.jpg',
       'https://www.nps.gov/common/uploads/structured_data/8DF30150-D91A-D761-4A5064BA77154E2C.jpg',
       'https://www.nps.gov/common/uploads/structured_data/8E1AE30B-DBDB-C193-C1023F2C7591ABA0.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/8E003516-C693-8617-61EC2F2E06BA1E45.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/8E003516-C693-8617-61EC2F2E06BA1E45.jpg',
+    ],
   },
   {
     parkName: 'Congaree National Park',
     images: [
-      'https://www.nps.gov/common/uploads/structured_data/3C862C60-1DD8-B71B-0BB65F7B652BA840.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C862C60-1DD8-B71B-0BB65F7B652BA840.jpg',
+    ],
   },
   {
     parkName: 'Crater Lake National Park',
@@ -130,8 +131,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7B28BD-1DD8-B71B-0B3EA88108473DEA.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B2A16-1DD8-B71B-0B181596A537FAE3.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B2B97-1DD8-B71B-0B8A0028F7FBEC27.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7B2D3B-1DD8-B71B-0B39E67A3DC57E94.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7B2D3B-1DD8-B71B-0B39E67A3DC57E94.jpg',
+    ],
   },
   {
     parkName: 'Cuyahoga Valley National Park',
@@ -140,8 +141,8 @@
       'https://www.nps.gov/common/uploads/structured_data/F78A31A2-D7AD-F384-BEFACB28E45B7608.jpg',
       'https://www.nps.gov/common/uploads/structured_data/F7E15C5E-AF19-2C8B-7BC519C9BBDB06CC.jpg',
       'https://www.nps.gov/common/uploads/structured_data/F82FA0CD-D84B-D131-1A778346760D24FB.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/F8E08661-CAAB-331C-C3AD53B479822346.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/F8E08661-CAAB-331C-C3AD53B479822346.jpg',
+    ],
   },
   {
     parkName: 'Denali National Park & Preserve',
@@ -155,8 +156,8 @@
       'https://www.nps.gov/common/uploads/structured_data/FC83BEFE-AE6C-5FF4-B24723DEBC350D5B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/FC8ECC8C-A531-46F8-0D60DF1C84105DBE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/FC931BD0-F8BD-057C-1A1C1B165BCADB38.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/FC9EB92D-D2C5-B46F-3F9B7E4D1FC7EEE6.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/FC9EB92D-D2C5-B46F-3F9B7E4D1FC7EEE6.jpg',
+    ],
   },
   {
     parkName: 'Death Valley National Park',
@@ -169,8 +170,8 @@
       'https://www.nps.gov/common/uploads/structured_data/DE627F5D-DE99-659B-7F55B12323533BFC.jpg',
       'https://www.nps.gov/common/uploads/structured_data/1A18EC97-EB1E-7D32-05BE1B8D08719225.jpg',
       'https://www.nps.gov/common/uploads/structured_data/DEF5FFF0-0C8A-00A5-F2EA8F279F1DF876.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/DF10832A-92CD-9646-134739E0F537887E.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/DF10832A-92CD-9646-134739E0F537887E.jpg',
+    ],
   },
   {
     parkName: 'Dry Tortugas National Park',
@@ -181,8 +182,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C810626-1DD8-B71B-0B1DFF7BCF9A0682.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C810258-1DD8-B71B-0BE07AC43C736990.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C810049-1DD8-B71B-0B0040641619D4A6.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C810722-1DD8-B71B-0BAD4B445F0C3D8C.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C810722-1DD8-B71B-0BAD4B445F0C3D8C.jpg',
+    ],
   },
   {
     parkName: 'Everglades National Park',
@@ -192,8 +193,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C8547ED-1DD8-B71B-0B596F29F0A9A60B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85E60F-1DD8-B71B-0BAB4F7583E96025.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85E70B-1DD8-B71B-0B7C75649CCDB907.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C85F532-1DD8-B71B-0BFC5BB51D8AB675.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C85F532-1DD8-B71B-0BFC5BB51D8AB675.jpg',
+    ],
   },
   {
     parkName: 'Gates Of The Arctic National Park & Preserve',
@@ -202,8 +203,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A89F4-1DD8-B71B-0B52204A2EBF61A4.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A8CFC-1DD8-B71B-0BF455202A395DA6.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A8E6D-1DD8-B71B-0B34C967D29F5940.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A8FC3-1DD8-B71B-0BB9EF068FF8EFF7.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A8FC3-1DD8-B71B-0BB9EF068FF8EFF7.jpg',
+    ],
   },
   {
     parkName: 'Glacier National Park',
@@ -215,8 +216,8 @@
       'https://www.nps.gov/common/uploads/structured_data/C1C49B92-9BE9-6A08-F2C851A2A4ACEC8D.jpg',
       'https://www.nps.gov/common/uploads/structured_data/C18842EE-B742-0CDF-A45734EFC4BC627F.jpg',
       'https://www.nps.gov/common/uploads/structured_data/C19B20BB-C8CC-5BAB-22E3CA6AF9B2B67C.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/C1D92513-07D0-46D9-B1F44DE6F993D5BC.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/C1D92513-07D0-46D9-B1F44DE6F993D5BC.jpg',
+    ],
   },
   {
     parkName: 'Glacier Bay National Park & Preserve',
@@ -226,8 +227,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C790D9C-1DD8-B71B-0B4327321DED12AE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C790F92-1DD8-B71B-0BDF3774E82CB555.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C79135D-1DD8-B71B-0BDF788A6D50B7A9.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A0EE5-1DD8-B71B-0BADF220CB5F20BE.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A0EE5-1DD8-B71B-0BADF220CB5F20BE.jpg',
+    ],
   },
   {
     parkName: 'Great Basin National Park',
@@ -240,8 +241,8 @@
       'https://www.nps.gov/common/uploads/structured_data/7B10375F-92FE-77A4-A3E83F2F98E7C33D.jpg',
       'https://www.nps.gov/common/uploads/structured_data/7B5F2CE2-010C-9E2E-4A0726C1F4AD4095.jpg',
       'https://www.nps.gov/common/uploads/structured_data/7B308D3B-D910-3EB0-4C04E215333F2C5D.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/AED0DAB8-0FB7-5710-46732DF80111AC64.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/AED0DAB8-0FB7-5710-46732DF80111AC64.jpg',
+    ],
   },
   {
     parkName: 'Grand Canyon National Park',
@@ -250,8 +251,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7B143E-1DD8-B71B-0BD4A1EF96847292.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B15A4-1DD8-B71B-0BFADECB506765CC.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B1720-1DD8-B71B-0B74DCF6F887A960.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/2B5BB10B-E098-B63E-6DA18036787C8D6E.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/2B5BB10B-E098-B63E-6DA18036787C8D6E.jpg',
+    ],
   },
   {
     parkName: 'Great Sand Dunes National Park & Preserve',
@@ -263,8 +264,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7D0254-1DD8-B71B-0B302F546130C0B3.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7D0B9A-1DD8-B71B-0B62FA4120CA0DE8.jpg',
       'https://www.nps.gov/common/uploads/structured_data/B841835F-9E6C-AB24-2A2DCCD0200F302B.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/BEB545F8-F6F7-AA30-7B7567CB4A800D66.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/BEB545F8-F6F7-AA30-7B7567CB4A800D66.jpg',
+    ],
   },
   {
     parkName: 'Great Smoky Mountains National Park',
@@ -275,8 +276,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C80F6C9-1DD8-B71B-0B33F35922A21B3B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C80EDBC-1DD8-B71B-0B743AF911FE7557.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C80EEE2-1DD8-B71B-0BC2620AAA57D7CA.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C80EC37-1DD8-B71B-0B87F63E8B030D15.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C80EC37-1DD8-B71B-0B87F63E8B030D15.jpg',
+    ],
   },
   {
     parkName: 'Grand Teton National Park',
@@ -291,8 +292,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7FC084-1DD8-B71B-0BA15A2029FE25D5.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7FC1D0-1DD8-B71B-0BE07FCB0A12AC0B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7FC332-1DD8-B71B-0B33576EE630E247.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7FC5D7-1DD8-B71B-0BD39976D94BEA47.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7FC5D7-1DD8-B71B-0BD39976D94BEA47.jpg',
+    ],
   },
   {
     parkName: 'Guadalupe Mountains National Park',
@@ -302,8 +303,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C8256DA-1DD8-B71B-0B7E4BE83A8B56F9.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C82588D-1DD8-B71B-0B233383D71368EB.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C82A652-1DD8-B71B-0B7E219169341CAD.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/AC3F41C8-CB05-1F59-18AFF80496BA94D1.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/AC3F41C8-CB05-1F59-18AFF80496BA94D1.jpg',
+    ],
   },
   {
     parkName: 'Haleakalā National Park',
@@ -311,8 +312,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3D05E583-1DD8-B71B-0BBFF82F7F78AF6A.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3D3323B6-1DD8-B71B-0B78ACA534C1D05E.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3D771172-1DD8-B71B-0B981DA08B1FE163.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C87A368-1DD8-B71B-0BD44B189D0D9368.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C87A368-1DD8-B71B-0BD44B189D0D9368.jpg',
+    ],
   },
   {
     parkName: 'Hawaiʻi Volcanoes National Park',
@@ -332,8 +333,8 @@
       'https://www.nps.gov/common/uploads/structured_data/7AE7B515-91B9-74CF-65F0E0D99C6C78EE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/7B6470EF-A9BB-8B7F-4D5991FC840700A9.jpg',
       'https://www.nps.gov/common/uploads/structured_data/7C58F90C-0AB8-DF2A-1543251CCBBEF9D7.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/7ABCA1B9-F4F9-660F-1752379E4517F1EE.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/7ABCA1B9-F4F9-660F-1752379E4517F1EE.jpg',
+    ],
   },
   {
     parkName: 'Hot Springs National Park',
@@ -348,8 +349,8 @@
       'https://www.nps.gov/common/uploads/structured_data/C14F1D4A-FAF7-A20F-163F60EBF0B127F9.jpg',
       'https://www.nps.gov/common/uploads/structured_data/245F811B-A97D-0C77-41A3D373703FB1FB.jpg',
       'https://www.nps.gov/common/uploads/structured_data/C189E13D-FC70-0C3B-AFE8915E5B27F434.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/C1A14390-C25E-5A82-BA89C2004C3A526B.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/C1A14390-C25E-5A82-BA89C2004C3A526B.jpg',
+    ],
   },
   {
     parkName: 'Isle Royale National Park',
@@ -359,8 +360,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7AC355-1DD8-B71B-0B9C2F07853F39F1.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7AC4C1-1DD8-B71B-0B8592CA6634ABEE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7AC638-1DD8-B71B-0BD28B3407821A15.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7AC8F5-1DD8-B71B-0B661B7FF90F5407.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7AC8F5-1DD8-B71B-0B661B7FF90F5407.jpg',
+    ],
   },
   {
     parkName: 'Joshua Tree National Park',
@@ -372,8 +373,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C85EC5C-1DD8-B71B-0B3B00469411625A.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85E941-1DD8-B71B-0BCAA9F8A0BD4E0F.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85EDAE-1DD8-B71B-0B3E7EAC7E299A23.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C85EB5A-1DD8-B71B-0BACA59CC5E5A620.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C85EB5A-1DD8-B71B-0BACA59CC5E5A620.jpg',
+    ],
   },
   {
     parkName: 'Katmai National Park & Preserve',
@@ -382,8 +383,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A32DB-1DD8-B71B-0B37F66E9D0832AF.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A3473-1DD8-B71B-0B65158B5807CE0D.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A35BF-1DD8-B71B-0BB1644AA6CF4C8B.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A3776-1DD8-B71B-0BB94C2392CD5B01.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A3776-1DD8-B71B-0BB94C2392CD5B01.jpg',
+    ],
   },
   {
     parkName: 'Kenai Fjords National Park',
@@ -392,8 +393,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7DE352-1DD8-B71B-0B35831ADF254DE0.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7DE50D-1DD8-B71B-0B23431BC04ACB33.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7DE88C-1DD8-B71B-0B3F02FD7F30F1AF.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7DEEE0-1DD8-B71B-0B7B85B29F07C371.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7DEEE0-1DD8-B71B-0B7B85B29F07C371.jpg',
+    ],
   },
   {
     parkName: 'Kobuk Valley National Park',
@@ -402,8 +403,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A134A-1DD8-B71B-0B3C2789713B6113.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A147D-1DD8-B71B-0BCC5182A7F0918A.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A1563-1DD8-B71B-0B76572CC32EBD25.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A168D-1DD8-B71B-0B5167863DD39B57.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A168D-1DD8-B71B-0B5167863DD39B57.jpg',
+    ],
   },
   {
     parkName: 'Lake Clark National Park & Preserve',
@@ -416,8 +417,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A9BBB-1DD8-B71B-0BD4675D87449A15.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7AA70A-1DD8-B71B-0BCA87C6E2CA136E.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7AA5B4-1DD8-B71B-0BCD819BADB29D2E.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7AA314-1DD8-B71B-0B5E93E5AD68E6D5.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7AA314-1DD8-B71B-0B5E93E5AD68E6D5.jpg',
+    ],
   },
   {
     parkName: 'Lassen Volcanic National Park',
@@ -428,8 +429,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C873CC3-1DD8-B71B-0B076FC2806DF140.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C873E3A-1DD8-B71B-0BBD47F2E441D2F7.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C874252-1DD8-B71B-0B6BC0D39B9A51C2.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C8743DC-1DD8-B71B-0B1DE16014F1A63F.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C8743DC-1DD8-B71B-0B1DE16014F1A63F.jpg',
+    ],
   },
   {
     parkName: 'Mammoth Cave National Park',
@@ -440,8 +441,8 @@
       'https://www.nps.gov/common/uploads/structured_data/94F61E66-ACE7-ED8C-FC411F6BFDD80490.jpg',
       'https://www.nps.gov/common/uploads/structured_data/9472C6B0-DF25-7F27-BA8D162F34D2CB2F.jpg',
       'https://www.nps.gov/common/uploads/structured_data/95357AD9-E6A5-DDCF-432D3E3832808431.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/958C8BC3-9657-7E73-D0697F507A869B69.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/958C8BC3-9657-7E73-D0697F507A869B69.jpg',
+    ],
   },
   {
     parkName: 'Mesa Verde National Park',
@@ -452,8 +453,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7C04EC-1DD8-B71B-0BD94A784A808041.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7C0716-1DD8-B71B-0B441C4B55F42D92.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7C0874-1DD8-B71B-0B223C1FF22A5351.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/843DFA61-1DD8-B71B-0B2CA37EAC5F6718.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/843DFA61-1DD8-B71B-0B2CA37EAC5F6718.jpg',
+    ],
   },
   {
     parkName: 'Mount Rainier National Park',
@@ -466,8 +467,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7C68E6-1DD8-B71B-0B42E9A3C7ECA52D.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7C6EE9-1DD8-B71B-0B62C52C6844CC70.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7C6A93-1DD8-B71B-0BA75B16C5FA3690.jpeg',
-      'https://www.nps.gov/common/uploads/structured_data/1FD67031-C1A8-4462-6B815FF24500A576.jpeg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/1FD67031-C1A8-4462-6B815FF24500A576.jpeg',
+    ],
   },
   {
     parkName: 'North Cascades National Park',
@@ -476,8 +477,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A5B0D-1DD8-B71B-0B1104A95B7A2026.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A5CC2-1DD8-B71B-0BC0F615561921EE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A5E46-1DD8-B71B-0B63BF950D3D6FB2.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A5FF6-1DD8-B71B-0BAAFB88D0A3DC08.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A5FF6-1DD8-B71B-0BAAFB88D0A3DC08.jpg',
+    ],
   },
   {
     parkName: 'National Park of American Samoa',
@@ -485,8 +486,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C84F643-1DD8-B71B-0BC6F3EA2E1F58AB.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C84F785-1DD8-B71B-0B93723B92528909.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C84F8DB-1DD8-B71B-0BD434E17818331B.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C84FA18-1DD8-B71B-0BD1AEF488A50F9F.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C84FA18-1DD8-B71B-0BD1AEF488A50F9F.jpg',
+    ],
   },
   {
     parkName: 'Olympic National Park',
@@ -497,8 +498,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7B20CD-1DD8-B71B-0B9ACC145EFE6B99.jpg',
       'https://www.nps.gov/common/uploads/structured_data/38E48259-E38E-825D-87A9943EEEEADDA4.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7B1F36-1DD8-B71B-0B367264CE3B4EE8.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7B1A8C-1DD8-B71B-0B15D930BD8214F5.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7B1A8C-1DD8-B71B-0B15D930BD8214F5.jpg',
+    ],
   },
   {
     parkName: 'Petrified Forest National Park',
@@ -529,8 +530,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C85CD2A-1DD8-B71B-0B4D05CE130B763B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85CE61-1DD8-B71B-0B9F5602A4737BCA.jpg',
       'https://www.nps.gov/common/uploads/structured_data/044BA1B8-1DD8-B71B-0BDCE568A7F4FC60.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/0076C680-AA38-F8ED-1B3B94267707127E.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/0076C680-AA38-F8ED-1B3B94267707127E.jpg',
+    ],
   },
   {
     parkName: 'Pinnacles National Park',
@@ -538,8 +539,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C86A8CB-1DD8-B71B-0BAE8F7141CCBB1B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C86AAE7-1DD8-B71B-0BA8BC5E5E895E98.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C86AE8B-1DD8-B71B-0B3ACEBC064CCC03.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/9CCA8ED3-ABB9-CB69-EF4B32F2ADACEC47.jpeg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/9CCA8ED3-ABB9-CB69-EF4B32F2ADACEC47.jpeg',
+    ],
   },
   {
     parkName: 'Redwood National and State Parks',
@@ -573,16 +574,16 @@
       'https://www.nps.gov/common/uploads/structured_data/992C1AD1-DEB3-71E1-8957B1239DE3DD08.jpg',
       'https://www.nps.gov/common/uploads/structured_data/993D8B8C-0344-81FA-1E843595FB16A862.jpg',
       'https://www.nps.gov/common/uploads/structured_data/995A228C-0A29-6E21-40A3F8CEB80F0EA4.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/99760CA4-B715-CE75-C70E9631A2A4DB04.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/99760CA4-B715-CE75-C70E9631A2A4DB04.jpg',
+    ],
   },
   {
     parkName: 'Rocky Mountain National Park',
     images: [
       'https://www.nps.gov/common/uploads/structured_data/1218667F-BCF0-D30F-701253467183E080.jpg',
       'https://www.nps.gov/common/uploads/structured_data/12409EB8-F28C-7397-3CB2EFB60E70F06C.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/12550AC4-0A4B-31ED-1E85F91ABE8833D6.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/12550AC4-0A4B-31ED-1E85F91ABE8833D6.jpg',
+    ],
   },
   {
     parkName: 'Saguaro National Park',
@@ -592,8 +593,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C858613-1DD8-B71B-0BEFB533FAB3FB55.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C85873C-1DD8-B71B-0BA5D81599611142.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C858903-1DD8-B71B-0BE2312B40DB3D26.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C858AB6-1DD8-B71B-0B0F6C0A56410894.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C858AB6-1DD8-B71B-0B0F6C0A56410894.jpg',
+    ],
   },
   {
     parkName: 'Sequoia & Kings Canyon National Parks',
@@ -602,8 +603,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7A2835-1DD8-B71B-0B468E834049FBE4.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A2E1B-1DD8-B71B-0B4D563CB47FA60F.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7A301B-1DD8-B71B-0B8311F9B0AC4F69.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7A4E3C-1DD8-B71B-0B99ADC8D2689BDE.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7A4E3C-1DD8-B71B-0B99ADC8D2689BDE.jpg',
+    ],
   },
   {
     parkName: 'Shenandoah National Park',
@@ -612,8 +613,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C80B63B-1DD8-B71B-0BAC3145E329FC99.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C80B752-1DD8-B71B-0B0FAB718671DC3E.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C80B867-1DD8-B71B-0B328321E4420769.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C80B989-1DD8-B71B-0B3A418BF2F78CF0.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C80B989-1DD8-B71B-0B3A418BF2F78CF0.jpg',
+    ],
   },
   {
     parkName: 'Theodore Roosevelt National Park',
@@ -627,8 +628,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C793C29-1DD8-B71B-0BD780A3A72F020B.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C79484D-1DD8-B71B-0BD76E098C35DBFA.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C794D85-1DD8-B71B-0BE8C67C46D0233A.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C795014-1DD8-B71B-0B9A2115735380B0.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C795014-1DD8-B71B-0B9A2115735380B0.jpg',
+    ],
   },
   {
     parkName: 'Voyageurs National Park',
@@ -638,8 +639,8 @@
       'https://www.nps.gov/common/uploads/structured_data/C44E1879-9C3A-8F39-26AEBBEBB74FAD37.jpeg',
       'https://www.nps.gov/common/uploads/structured_data/3C840875-1DD8-B71B-0B2416D8B710421E.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C840A23-1DD8-B71B-0B19E7CC6CCDF7C7.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/C46E3A91-C824-DAC5-5E137B57FC714764.jpeg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/C46E3A91-C824-DAC5-5E137B57FC714764.jpeg',
+    ],
   },
   {
     parkName: 'Wind Cave National Park',
@@ -648,8 +649,8 @@
       'https://www.nps.gov/common/uploads/structured_data/3C7ACE71-1DD8-B71B-0BBD14BFE8C0C468.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7ACFE9-1DD8-B71B-0BA11E8BB9A0EE0D.jpg',
       'https://www.nps.gov/common/uploads/structured_data/3C7AD1AD-1DD8-B71B-0B7C9E1C79DA6F5C.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/3C7AD3B1-1DD8-B71B-0BC2F74D3D134758.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/3C7AD3B1-1DD8-B71B-0BC2F74D3D134758.jpg',
+    ],
   },
   {
     parkName: 'Wrangell - St Elias National Park & Preserve',
@@ -663,64 +664,64 @@
       'https://www.nps.gov/common/uploads/structured_data/9DCBE069-A954-BD79-5281A59DC8A04EDE.jpg',
       'https://www.nps.gov/common/uploads/structured_data/9DD39775-F416-41FB-469ABEA4388BD8F2.jpg',
       'https://www.nps.gov/common/uploads/structured_data/9DE230BE-C2B2-38C5-DF6FF368C1AB8F0B.jpg',
-      'https://www.nps.gov/common/uploads/structured_data/9DED0407-CD98-60E5-7965642A3CD2DA0D.jpg'
-    ]
+      'https://www.nps.gov/common/uploads/structured_data/9DED0407-CD98-60E5-7965642A3CD2DA0D.jpg',
+    ],
   },
   {
-    "parkName": "Yellowstone National Park",
-    "images": [
-      "https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D334F-1DD8-B71B-0B108C7771F4E854.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D3BD3-1DD8-B71B-0BB607F9BAAE1271.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D573E-1DD8-B71B-0B5C0DF5BB91D043.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D5AB4-1DD8-B71B-0BF91CF45345ED16.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D610A-1DD8-B71B-0BEF676112007818.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D8903-1DD8-B71B-0BA8669AEEF74379.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7D95DD-1DD8-B71B-0BC4FA19BD72F0EC.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/8A729E5B-B263-9C49-7AD4C4B8E70064E0.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/8A869F85-FB2E-5EAF-11367EB2DB75963D.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/8A902498-9D11-D06D-E352C073E3E85A58.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/8AB8F1A3-D1A0-A6FB-E8E5CAA8B2937264.jpeg"
-    ]
+    parkName: 'Yellowstone National Park',
+    images: [
+      'https://www.nps.gov/common/uploads/structured_data/3C7D5920-1DD8-B71B-0B83F012ED802CEA.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D334F-1DD8-B71B-0B108C7771F4E854.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D3BD3-1DD8-B71B-0BB607F9BAAE1271.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D573E-1DD8-B71B-0B5C0DF5BB91D043.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D5AB4-1DD8-B71B-0BF91CF45345ED16.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D610A-1DD8-B71B-0BEF676112007818.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D8903-1DD8-B71B-0BA8669AEEF74379.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7D95DD-1DD8-B71B-0BC4FA19BD72F0EC.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/8A729E5B-B263-9C49-7AD4C4B8E70064E0.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/8A869F85-FB2E-5EAF-11367EB2DB75963D.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/8A902498-9D11-D06D-E352C073E3E85A58.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/8AB8F1A3-D1A0-A6FB-E8E5CAA8B2937264.jpeg',
+    ],
   },
   {
-    "parkName": "Yosemite National Park",
-    "images": [
-      "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84CAEC-1DD8-B71B-0BA0EEA50BB40F8B.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84CDD0-1DD8-B71B-0B6E5868AFC75B6B.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84C82D-1DD8-B71B-0B8D6902B62369E2.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C8560E1-1DD8-B71B-0BD3183636F4B861.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84C97E-1DD8-B71B-0B5DD2112C58C175.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/058C8410-D5BA-32F4-BC468014AF42CB0B.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/232C02DC-BE31-0C6D-E1E2D2FB1EE7E251.jpg"
-    ]
+    parkName: 'Yosemite National Park',
+    images: [
+      'https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84CAEC-1DD8-B71B-0BA0EEA50BB40F8B.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84CDD0-1DD8-B71B-0B6E5868AFC75B6B.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84C82D-1DD8-B71B-0B8D6902B62369E2.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C8560E1-1DD8-B71B-0BD3183636F4B861.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84C97E-1DD8-B71B-0B5DD2112C58C175.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/058C8410-D5BA-32F4-BC468014AF42CB0B.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/232C02DC-BE31-0C6D-E1E2D2FB1EE7E251.jpg',
+    ],
   },
   {
-    "parkName": "Yukon - Charley Rivers National Preserve",
-    "images": [
-      "https://www.nps.gov/common/uploads/structured_data/5441BF50-05AD-F33E-6A0339476B5B18EF.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7A625C-1DD8-B71B-0B937F599D9D10DF.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/3C7A6453-1DD8-B71B-0BD5799A0348C713.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/56A9969F-9BE7-F7A4-2DF42106328FEFBE.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/576A1897-A20F-B183-CE6A8AB15207E519.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/586B0BCE-D61C-2105-5C518EB2E5A138C0.jpg"
-    ]
+    parkName: 'Yukon - Charley Rivers National Preserve',
+    images: [
+      'https://www.nps.gov/common/uploads/structured_data/5441BF50-05AD-F33E-6A0339476B5B18EF.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7A625C-1DD8-B71B-0B937F599D9D10DF.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/3C7A6453-1DD8-B71B-0BD5799A0348C713.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/56A9969F-9BE7-F7A4-2DF42106328FEFBE.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/576A1897-A20F-B183-CE6A8AB15207E519.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/586B0BCE-D61C-2105-5C518EB2E5A138C0.jpg',
+    ],
   },
   {
-    "parkName": "Zion National Park",
-    "images": [
-      "https://www.nps.gov/common/uploads/structured_data/68BFC1AC-BF96-629F-89D261D78F181C64.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/69162F54-D4AF-8695-A42F97A8F9774C19.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/68D46E7D-A116-A443-ABA04AD1DD785208.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/68ED8C2C-A9D3-90B2-BBC96E7A21BC3744.jpg",
-      "https://www.nps.gov/common/uploads/structured_data/69033C8D-B439-855D-6B260FB2F4CDB53B.jpg"
-    ]
-  }
-]
+    parkName: 'Zion National Park',
+    images: [
+      'https://www.nps.gov/common/uploads/structured_data/68BFC1AC-BF96-629F-89D261D78F181C64.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/69162F54-D4AF-8695-A42F97A8F9774C19.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/68D46E7D-A116-A443-ABA04AD1DD785208.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/68ED8C2C-A9D3-90B2-BBC96E7A21BC3744.jpg',
+      'https://www.nps.gov/common/uploads/structured_data/69033C8D-B439-855D-6B260FB2F4CDB53B.jpg',
+    ],
+  },
+];
