@@ -38,7 +38,7 @@ body{
 
 }
 
-.img{
+.img, .gr_img{
     position: absolute;
     height: 400px;
     bottom : 0px;
@@ -144,4 +144,24 @@ body{
 .homepageContainer .btns button:hover{
     background-color: #c96c01;
     
+}
+
+/* GameRoom Styling */
+
+.gameRoomContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageContainer{
+    display: block;
+    height: 350px;
+    width: 450px;
+    border: 15px solid #023047;
+}
+
+.gr_img{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
