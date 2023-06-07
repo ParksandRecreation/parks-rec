@@ -1,15 +1,29 @@
 import express, { Request, Response, Router } from 'express';
+// import { getUserData } from '../controllers/loginController';
 import loginController from '../controllers/loginController';
-// const express = require('express');
-// const getUserData = require('../controllers/loginController');
 
-const router: any = express.Router();
+const loginRoute: any = Router();
 
-router.get('/userData', (req: any, res: any) => {
-  const accessToken = req.query.accessToken;
-  loginController
-    .getUserData(accessToken as string)
-    .then((res: any) => res.json(res));
+loginRoute.get(
+  '/oauth',
+  loginController.getUserData,
+  (req: Request, res: Response) => {
+    res.status(200).json(res.locals.userInfo);
+  }
+);
+
+// loginRoute.get('/oauth', (req: Request, res: Response) => {
+//   // const accessToken = req.query.accessToken;
+//   const accessToken =
+//     '143680018728-1fb574qfkojddts9msssul16a7jo6kjc.apps.googleusercontent.com';
+//   console.log('accessToken ', accessToken);
+//   getUserData(accessToken as string).then((res: any) =>
+//     res.status(200).json(res)
+//   );
+// });
+
+loginRoute.get('/', (req: Request, res: Response) => {
+  res.status(200).send('login');
 });
 
-module.exports = router;
+export default loginRoute;
