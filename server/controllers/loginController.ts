@@ -3,23 +3,6 @@ import axios from 'axios';
 import { Request, Response, NextFunction } from 'express';
 dotenv.config();
 
-// export const getUserData = async (accessToken: string) => {
-//   try {
-//     const { data } = await axios.get(
-//       'https://www.googleapis.com/oauth2/v3/userinfo',
-//       {
-//         headers: {
-//           Authorization: `Bearer ${accessToken}`,
-//         },
-//       }
-//     );
-
-//     return data;
-//   } catch (err) {
-//     return null;
-//   }
-// };
-
 const loginController: any = {};
 loginController.getUserData = async (
   req: Request,
