@@ -1,4 +1,4 @@
-[
+[{
    parkName: 'Acadia National Park',
     images: [
       'https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg',
