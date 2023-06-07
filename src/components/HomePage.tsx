@@ -2,8 +2,15 @@ import React from 'react';
 import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+    const navigate = useNavigate();
+    const handleCreateRoomBtn = () => {
+       
+
+        navigate('/room');
+    }
 
  return (
     <>
@@ -14,8 +21,8 @@ const HomePage = () => {
                 <h4>Enter or Create Room ID to Join the Game</h4>
                 <input placeholder='Room ID' />
                 <div className='btns'>
-                    <button className='btn1'>Create Room</button>
-                    <button className='btn2'>Join Room</button>
+                    <button className='btn1' onClick={() => handleCreateRoomBtn()}>Create Room</button>
+                    <button className='btn2' onClick={() => handleCreateRoomBtn()}>Join Room</button>
                 </div>               
             </form>
         </div>
