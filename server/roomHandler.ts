@@ -1,6 +1,6 @@
 // client will emit an object with username and roomName
 type Payload = {
-  username: string,
+  userName: string,
   roomName: string
 }
 
@@ -16,11 +16,12 @@ const roomHandler = (io: any, socket: any, rooms: any) => {
     socket.join(payload.roomName);
     rooms[payload.roomName] = {
       players: {
-        [payload.username]: 0
+        [payload.userName]: 0 // player starts with a score of 0 upon creating room
       }
     }
     socket.emit('roomCreated', payload.roomName);
-  }
+    console.log('rooms: ', rooms);
+  };
 
   const join = (payload: Payload): void => {
     // if room doesn't exist or there are already 2 players, emit failure event
@@ -30,12 +31,20 @@ const roomHandler = (io: any, socket: any, rooms: any) => {
     }
     // if room exists, join room and emit success event
     socket.join(payload.roomName);
-    rooms[payload.roomName].players[payload.username] = 0
+    rooms[payload.roomName].players[payload.userName] = 0 //player starts with a score of 0 upon joining room
     socket.emit('roomJoined', payload.roomName);
-  }
+    console.log('rooms: ', rooms);
+  };
+
+  const check = (roomName: string) => {
+    // emit a true or false event based on room existence
+    if (rooms.hasOwnProperty(roomName)) socket.emit('roomExists', true);
+    else socket.emit('roomExists', false);
+  };
 
   socket.on('createRoom', create);
   socket.on('joinRoom', join);
+  socket.on('checkRoom', check);
 }
 
 export default roomHandler;

@@ -41,7 +41,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // oath route
-app.use('/login', loginRoute);
+app.use('/api/login', loginRoute);
 
 // catch-all route handler
 app.get('*', (req: Request, res: Response) => {
