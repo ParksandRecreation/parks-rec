@@ -27,6 +27,7 @@
     "jwt-decode": "^3.1.2",
     "mini-css-extract-plugin": "^2.7.6",
     "module_name": "^1.0.0",
+    "node-fetch": "^3.3.1",
     "pg": "^8.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
