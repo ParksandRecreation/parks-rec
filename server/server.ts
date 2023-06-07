@@ -1,25 +1,30 @@
 import path from 'path';
-import socket from 'socket.io';
-import http from 'http';
-import express, {
-  Request,
-  Response,
-  NextFunction,
-  ErrorRequestHandler,
-} from 'express';
+import { Server } from 'socket.io';
+import { createServer } from 'http';
+import { express, Request, Response, NextFunction } from './server-types';
 import loginRoute from './routes/loginRoute';
-// const loginRoute = require('./routes/loginRoute');
-// const path = require('path');
-// const socket = require('socket.io');
-// const http = require('http');
-// const express = require('express');
+import roomHandler from './roomHandler';
+
 const app = express();
-const server = http.createServer(app);
-const io = new socket.Server(server, {
+const server = createServer(app);
+const io = new Server(server, {
   cors: {
     origin: 'http://localhost:8080',
   },
 });
+
+app.set('io', io);
+
+const rooms = {};
+
+io.on('connection', socket => {
+  console.log('connected: ', socket.id);
+  roomHandler(io, socket, rooms);
+  
+  socket.on('disconnect', () => {
+    console.log('disconnected', socket.id);
+  });
+})
 
 const PORT: number = 3000;
 
@@ -36,12 +41,17 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // oath route
-app.use('/login', loginRoute);
+app.use('/api/login', loginRoute);
+
+// catch-all route handler
+app.get('*', (req: Request, res: Response) => {
+  res.sendFile(path.resolve(__dirname, '../dist/index.html'));
+});
 
 // express global error handler (use any for error type until we define custom error type later)
 app.use(
   (
-    err: ErrorRequestHandler,
+    err: any,
     req: Request,
     res: Response,
     next: NextFunction

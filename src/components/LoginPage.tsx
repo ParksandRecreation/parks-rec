@@ -13,13 +13,15 @@ const LoginPage = () => {
       localStorage.setItem('loginWith', 'Google');
       localStorage.setItem('accessToken', access_token);
       // pass the access token to backend to get userInfo
-      fetch(
-        'http://localhost:3000/login/oauth?accessToken=' +
-          `${access_token}`,
-        {
-          mode: 'cors',
-        }
-      )
+      // fetch(
+      //   // 'http://localhost:3000/login/oauth?accessToken=' +
+      //   //   `${access_token}`,
+      //   `/api/login${access_token}`,
+      //   {
+      //     mode: 'cors',
+      //   }
+      // )
+      fetch(`/api/login/oauth?accessToken=${access_token}`)
         .then(response => response.json())
         .then(data => {
           console.log(data);

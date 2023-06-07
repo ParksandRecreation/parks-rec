@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import tree from '../assets/tree.png';
 import camper from '../assets/camper.png';
 import { parkInfo } from '../../parkData';
 import { Timer } from '../components/Timer';
+import { io, Socket } from 'socket.io-client';
 
 interface Park {
   parkName?: string;
@@ -14,10 +16,25 @@ const fallbackImageUrl =
 const GameRoom = () => {
   const [currentPark, setCurrentPark] = useState<Park | null>(null);
   const [options, setOptions] = useState<string[]>([]);
+  const [socket, setSocket] = useState<Socket | null>(null);
+  const location = useLocation();
+  const { userName, roomName, create } = location.state;
 
   useEffect(() => {
     displayPark();
+    const socket = io('http://localhost:3000');
+    console.log('create: ', create);
+    console.log('userName: ', userName);
+    console.log('roomName: ', roomName);
+    if (create) socket.emit('createRoom', { userName, roomName });
+    else socket.emit('joinRoom', { userName, roomName });
+
+    // Clean up the socket connection when the component unmounts
+    return () => {
+      socket.disconnect();
+    };
   }, []);
+
 
   //randomly choose which park to display
   const displayPark = (): void => {

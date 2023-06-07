@@ -1,5 +1,5 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
 
@@ -13,12 +13,22 @@ module.exports = {
   },
 
   plugins: [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
     new Dotenv(),
   ],
+
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        secure: false,
+      },
+    },
+    historyApiFallback: true,
+  },
 
   module: {
     rules: [
