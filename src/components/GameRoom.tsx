@@ -17,6 +17,7 @@ const GameRoom = () => {
   const [currentPark, setCurrentPark] = useState<Park | null>(null);
   const [options, setOptions] = useState<string[]>([]);
   const [socket, setSocket] = useState<Socket | null>(null);
+  const [park, setPark] = useState<Park | null>(null);
   const location = useLocation();
   const { userName, roomName, create } = location.state;
 
@@ -25,12 +26,6 @@ const GameRoom = () => {
     const correctPark =
       parkInfo[Math.floor(Math.random() * parkInfo.length)];
     setCurrentPark(correctPark);
-
-    //get other options
-    // const multipleChoice: any[] = shuffle([
-    //   currentPark?.parkName,
-    //   parkInfo.map((park: Park) => park.parkName),
-    // ]);
 
     // Get other options
     const otherParks = parkInfo.filter(
@@ -75,7 +70,10 @@ const GameRoom = () => {
     const value = event.target.textContent;
     console.log('value: ', value);
     console.log('event: ', event.target.style);
-
+    const allOptionBtns = event.target.parentElement.childNodes;
+    allOptionBtns.forEach(
+      (el: any) => (el.style.backgroundColor = 'grey')
+    );
     if (value === currentPark?.parkName) {
       // make button green
       event.target.style.backgroundColor = "green";
@@ -83,11 +81,22 @@ const GameRoom = () => {
     } else {
       // make button red
       event.target.style.backgroundColor = "red";
+      //grab h2 and display currentPark.parkName
+      let header: any = document.getElementById('header');
+      if(header){
+        header.textContent = currentPark?.parkName;
+      }
+       
     }
     // disable buttons
     disableAllButtons();
 
-    // emit event to server to serve new park
+    // emit event to server to serve new park if both players have made selections
+    socket?.emit('makeSelection', { userName, roomName });
+    socket?.on('newParkStatus', (status: boolean) => {
+      // if both players have selected, serve new park
+      if (status) displayPark();
+    });
     
   }
 
@@ -107,6 +116,11 @@ const GameRoom = () => {
     };
   }, []);
 
+  // emit currentPark to both players when it changes
+  useEffect(() => {
+    socket?.emit('newPark', { roomName, currentPark });
+  }, [currentPark]);
+
   return (
     <>
       <Navbar />
@@ -116,7 +130,7 @@ const GameRoom = () => {
         </div>
 
          <div className="gameRoomContainer">
-          <h2>Guess the National Park...</h2>
+          <h2 id="header">Guess the National Park...</h2>
           {currentPark?.images &&
             currentPark?.images.length > 0 && ( // Added check for currentPark.images
               <div className="imageContainer">
@@ -128,6 +142,16 @@ const GameRoom = () => {
                 />
               </div>
             )}
+            {/* {park && (
+              <div className="imageContainer">
+                <img
+                  className="park_image"
+                  src={park.images[0] || fallbackImageUrl}
+                  alt={park.parkName}
+                  style={{ maxWidth: '100%', maxHeight: '100%' }}
+                />
+              </div>
+            )} */}
           <div className="btnContainer">
             {options.map((options: string, index: number) => (
               <button key={index} onClick={handleClick}>{options}</button>

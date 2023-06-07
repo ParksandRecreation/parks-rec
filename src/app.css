@@ -91,8 +91,14 @@ body {
   width: 100%;
   padding: 15px;
   font-size: 1.2rem;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
 }
+.Navbar h1 {
+  margin: 0;
+  padding: 0;
+}
+
 
 .Navbar a {
   text-decoration: none;
