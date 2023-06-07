@@ -1,14 +1,17 @@
 import express, { Request, Response, Router } from 'express';
 // import { getUserData } from '../controllers/loginController';
 import loginController from '../controllers/loginController';
+import userController from '../controllers/userController';
 
 const loginRoute: any = Router();
 
 loginRoute.get(
   '/oauth',
   loginController.getUserData,
+  userController.updateDB,
   (req: Request, res: Response) => {
-    res.status(200).json(res.locals.userInfo);
+    res.set('Access-Control-Allow-Origin', '*');
+    return res.status(200).json(res.locals.userInfo);
   }
 );
 
